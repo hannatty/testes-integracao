@@ -49,7 +49,7 @@ public class IntegracaoTest04 {
     @Test
     public void agruparLivrosByName(){
         ListaLivros listaLivros = Mockito.mock(ListaLivros.class);
-        Mockito.when(listaLivros.groupNyName("Programando em Ruby on Rails")).thenReturn(Livro.findAll());
+        Mockito.when(listaLivros.groupNyName("Aprendendo a programar em Ruby on Rails")).thenReturn(Livro.findAll());
         Assertions.assertEquals(0, listaLivros.groupNyName("Programando em Ruby on Rails").size());
         Mockito.verify(listaLivros, Mockito.atMost(1)).getLivros();
     }
